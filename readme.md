@@ -1,0 +1,1 @@
+This repo contains my ongoing work on MNIST dataset for handwritten digit classification.It will be updated as I learn new algorithms and tips and tricks in this field.

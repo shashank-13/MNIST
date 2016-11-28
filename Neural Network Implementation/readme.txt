@@ -1,0 +1,1 @@
+ The neural network was implemented from scratch.Used stochastic gradient descent with mini batch for updating the weights and biases of the network.100 hidden neurons was used.It took 44 min 12 seconds for 30 iterations.
