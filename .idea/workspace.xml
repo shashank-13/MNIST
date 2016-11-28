@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00125f47-ab98-4363-b69e-1a0a6a9173ba" name="Default" comment="&quot;checking&quot;">
+    <list default="true" id="00125f47-ab98-4363-b69e-1a0a6a9173ba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MNIST.iws" />
@@ -37,7 +37,7 @@
       <file leaf-file-name="improved_mnist.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Neural Network Implementation/improved_mnist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1813">
+            <state relative-caret-position="1711">
               <caret line="113" column="29" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="29" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -383,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1480359073000</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="&quot;checking&quot;">
+      <created>1480359193752</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1480359193752</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -551,7 +558,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Neural Network Implementation/improved_mnist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1813">
+        <state relative-caret-position="1711">
           <caret line="113" column="29" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="29" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
