@@ -1,0 +1,1 @@
+Used default scikit learn imprlementation of supervised K Nearest Neighbors algorithm.The k_neighbours parameters was manually set to seven.It gave an accuracy of 96.6 % on 10,000 images in test data set.

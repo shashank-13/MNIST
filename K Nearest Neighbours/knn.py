@@ -1,11 +1,10 @@
 import numpy as np
 import random
 import gzip,cPickle
-from sklearn import svm
-from sklearn.model_selection import GridSearchCV
-import time
+from sklearn.neighbors import KNeighborsClassifier
+import time 
 
-class SupportVectorMachine():
+class KNearestNeighborsClassifier():
 
     def load_Data(self):
         f = gzip.open(r'E:\MNIST\data\mnist.pkl.gz', 'rb')
@@ -31,33 +30,21 @@ class SupportVectorMachine():
         return e
 
 start_time=time.time()
-obj=SupportVectorMachine()
+obj=KNearestNeighborsClassifier()
 training_data,validation_data, test_data = obj.load_data_wrapper()
+neighbors=KNeighborsClassifier(n_neighbors=7)
 
-#clf=svm.SVC()
-
-random.shuffle(validation_data)
-
-temp_validation=[validation_data[k:k+10] for k in xrange(0,10000,10)]
-temp_validation_data=[x[0][0].flatten() for x in temp_validation]
-temp_validation_Result=[x[0][1] for x in temp_validation]
-
-
-clk=svm.SVC()
-parameters = {'kernel':['linear','rbf','poly'],'C':[1, 10,100,1000],'gamma':[1e-3, 1e-4,1e-5]}
-clf = GridSearchCV(clk, parameters)
-clf.fit(temp_validation_data,temp_validation_Result)
-print (clf.best_params_)
-clk=svm.SVC(**clf.best_params_)
-
+#for i in xrange (30):
 n=len(training_data)
 revised_training_Data=[]
 revised_training_result=[]
 for x in training_data:
-    revised_training_Data.append(x[0].flatten())
-    revised_training_result.append(x[1])
-clk.fit(revised_training_Data,revised_training_result)
-final_results=[(clk.predict(np.reshape(x[0],(1,-1))),x[1]) for x in test_data]
-print "Final Accuracy : {0}%".format(sum( int (x==y) for x,y in final_results)/100.0)
+	revised_training_Data.append(x[0].flatten())
+	revised_training_result.append(x[1])
+	
+
+neighbors.fit(revised_training_Data,revised_training_result)
+final_results=[(neighbors.predict(np.reshape(x[0],(1,-1))),x[1]) for x in test_data]
+print "Final Accuracy {0}%".format(sum( int (x==y) for x,y in final_results)/100.0)
 
 print("--- %s seconds ---" % (time.time() - start_time))

@@ -1,2 +1,2 @@
- Classifying digits using SVM took 40 minutes for 30 iterations using 'rbf' kernel.The parameters were learned on validation data.
+ Classifying digits using SVM took 20 minutes .After learning the parameters from validation data  'rbf' kernel was used with C value of '10' and gamma '0.001'.
  After that it was fed as input for learning on training data comprising of 50,000 images and the testing was done on a separate dataset of 10,000 images.
